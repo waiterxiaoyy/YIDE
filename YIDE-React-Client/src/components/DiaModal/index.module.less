@@ -1,0 +1,109 @@
+.confirmDialogOverlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 999;
+  }
+
+
+
+.confirmDialog {
+    width: 560px;
+    height: 250px;
+    background-color: #9c9999;
+    box-shadow: 1px 1px 5px 2px rgb(84, 83, 80);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.tooBar{
+    margin: 0;
+    width: 100%;  
+    height: 8px;
+
+    background-image: linear-gradient(270deg, #eed7be 0%, #ed8020 100%);
+    --webkit-animation: gradientBG 2s ease infinite;
+    animation: gradientBG 2s ease infinite;
+}
+
+.content {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    padding: 10px;
+
+    .title {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .message {
+        margin-top: 20px;
+    }
+
+}
+
+
+.confirmDialogButtons {
+    display: flex;
+    width: 80%;
+
+    margin-top: 20px;
+
+    justify-content: space-around;
+    align-items: center;
+    font-size: 32px;
+    border: none;
+    color: white;
+    
+
+    .ok,
+    .cancel {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    .ok {
+        background-color: #eb7806;
+        border: 2px solid #9c9999;
+        &:hover {
+            color: #000;
+            background-color: #fff;
+            border: 2px solid #eb7806;
+            // background-color: blue;
+        }
+    }
+
+    .cancel {
+        background-color: #e7e7e7; 
+        color: black;
+        border: 2px solid #9c9999;
+        &:hover {
+            background-color: #fff;
+            border: 2px solid #e7e7e7;
+            // color: white;
+            // background-color: rgb(255, 0, 98);
+        }
+    }
+}
+  

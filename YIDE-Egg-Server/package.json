@@ -1,0 +1,53 @@
+{
+  "name": "yide-egg-server",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.2",
+    "ali-oss": "^6.20.0",
+    "babel-standalone": "^6.26.0",
+    "cheerio": "^1.0.0-rc.12",
+    "egg": "^3.17.5",
+    "egg-cors": "^3.0.1",
+    "egg-jwt": "^3.1.7",
+    "egg-mysql": "^4.0.0",
+    "egg-scripts": "2",
+    "egg-sequelize": "^6.0.0",
+    "htmlparser2": "^9.1.0",
+    "mysql2": "^3.11.0",
+    "postcss": "^8.4.40",
+    "postcss-cssnext": "^3.1.1",
+    "postcss-import": "^16.1.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^6.10.0",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "13"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-YIDE-Egg-Server",
+    "prod": "EGG_SERVER_ENV=prod egg-scripts start --title=egg-server-YIDE-Egg-Server",
+    "stop": "egg-scripts stop --title=egg-server-YIDE-Egg-Server",
+    "dev": "egg-bin dev",
+    "test": "npm run lint -- --fix && npm run test:local",
+    "test:local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:waiterxiaoyy/YIDE.git"
+  },
+  "author": "WaiterXiaoYY",
+  "license": "MIT"
+}

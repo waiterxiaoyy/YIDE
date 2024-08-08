@@ -1,0 +1,115 @@
+body {
+	padding: 10px;
+	/* margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	line-height: 1.6;
+	font-size: 18px; */
+	background-color: #1e1e1e;
+	/* color: #50FA7B; */
+	
+}
+
+.title {
+	color: #ff7b00;
+	font-size: 45px;
+	margin-bottom: 10px;
+}
+
+ul {
+	color: #F1FA8C;
+}
+
+p {
+	color: #FF79C6;
+}
+
+.sologan {
+	color: #25c79c;
+	font-size: 30px;
+}
+
+#time {
+	color: #FF5555;
+	font-size: 20px;
+}
+
+.ibutton {
+	border: none;
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #25c79c;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 8px;
+	font-weight: 500;
+}
+
+.ibutton:hover {
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #25c79c;
+}
+
+.logo {
+	display: flex;
+	font-family: 'Arial', sans-serif;
+	font-size: 100px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ff7b00;
+	position: relative;
+	animation: flicker 1.0s infinite alternate;
+}
+
+.logo::before {
+	content: 'YIDE';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: #ff7b00;
+	z-index: -1;
+	filter: blur(10px);
+	opacity: 0.8;
+}
+
+.logo::after {
+	content: 'YIDE';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: #ff7b00;
+	z-index: -2;
+	filter: blur(20px);
+	opacity: 0.5;
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.neon-glow {
+	text-shadow:
+	0 0 15px #f0d8bf,
+	0 0 15px #f0d8bf,
+	0 0 15px #f0d8bf,
+	0 0 15px #f0d8bf,
+	0 0 25px #f0d8bf,
+	0 0 15px #f0d8bf,
+	0 0 15px #f0d8bf;
+}

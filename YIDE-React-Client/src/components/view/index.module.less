@@ -1,0 +1,53 @@
+
+.view {
+    height: 100%;
+    // padding: 20px;
+}
+
+.mdContent {
+    padding: 20px;
+    height: calc(100% - 40px);
+    // width: 100%;
+    border: none !important;
+    // background-color: antiquewhite;
+    overflow: auto; /* 添加这行以启用滚动条 */
+    :global(.markdown-body) {
+        overflow: auto;
+        color: #abb2bf;
+        font-size: 16px;
+        img {
+            max-width: 100%;
+        }
+        ul {
+            li {
+                color: #abb2bf;
+            }
+        }
+        ol {
+            padding: 0 0 0 20px;
+            li {
+                color: #abb2bf;
+            }
+        }
+        p {
+            color: #abb2bf;
+        }
+        h4 {
+            color: #abb2bf;
+        }
+        h5 {
+            color: #abb2bf;
+        }
+
+        a {
+            color: #abb2bf;
+        }
+
+        blockquote {
+            color: #abb2bf;
+        }
+        table {
+            color: #abb2bf;
+        }
+    }
+}

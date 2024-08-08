@@ -1,0 +1,70 @@
+.mainPage {
+    /* width: 100%; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .content {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+  
+  .explorer {
+    height: 100%;
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+  
+  .editor {
+    height: 100%;
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+  
+  .view {
+    flex: 1;
+    min-width: 200px;
+    height: 100%;
+    background-color: #1e1e1e;
+  }
+  
+  .viewOutput {
+    height: 100%;
+    z-index: 10;
+  }
+  
+  .resizer {
+    width: 2px;
+    height: 100%;
+    background: #37373d;
+    cursor: ew-resize;
+
+    &:hover {
+      background: #eb7806;
+    }
+  }
+  
+  .hiddenView {
+    visibility: hidden;
+    background-color: #1e1e1e;
+  }
+  
+  .viewDefault {
+    /* height: 100%; */
+    background-color: #1e1e1e;
+    text-align: center;
+    line-height: inherit;
+    font-size: 30px;
+    font-weight: 700;
+    color: #abb2bf;
+    margin-top: 50%;
+    display: none;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }

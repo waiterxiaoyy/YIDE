@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>whater</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #edeeed;
+    }
+
+    body>div {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body>div>div {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: transparent;
+      border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
+      box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+        15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+    }
+
+    body>div>div::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 35px;
+      background: #fff;
+      width: 20px;
+      height: 20px;
+      border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+    }
+
+    body>div>div::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 65px;
+      background: #fff;
+      width: 10px;
+      height: 10px;
+      border-radius: 57% 43% 37% 63% / 48% 37% 63% 52%;
+    }
+
+    body>div>div:nth-child(2) {
+      transform: scale(0.5) translate(-200px, 180px);
+      border-radius: 64% 36% 42% 58% / 42% 37% 63% 58%;
+    }
+
+    body>div>div:nth-child(3) {
+      transform: scale(0.5) translate(280px, 10px);
+      border-radius: 49% 51% 42% 58% / 56% 47% 53% 44%;
+    }
+
+    body>div>div:nth-child(4) {
+      transform: scale(0.5) translate(120px, -350px);
+      border-radius: 39% 61% 63% 37% / 77% 47% 53% 23%;
+    }
+
+    body>div>div:nth-child(5) {
+      transform: scale(0.3) translate(20px, -350px);
+      border-radius: 37% 63% 64% 36% / 53% 65% 35% 47%;
+    }
+
+    body>div>div:nth-child(6) {
+      transform: scale(0.7) translate(-150px, -200px);
+      border-radius: 37% 63% 64% 36% / 53% 65% 35% 47%;
+    }
+
+    body>div>div:nth-child(7) {
+      transform: scale(0.4) translate(-400px, -100px);
+      border-radius: 37% 63% 64% 36% / 53% 65% 35% 47%;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+
+.editor {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.topBar {
+    height: 30px;
+    color: #abb2bf;
+    padding: 10px 40px 10px 60px;
+    border-bottom: #2b2b2b 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+        color: #abb2bf;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .fileName{
+        color: rgb(235, 120, 6);
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .toolItemList {
+        display: flex;
+        gap: 8px;
+        .saveStatus {
+            color: #abb2bf;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+       .toolItem {
+            font-size: 22px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            &:hover {
+                color: rgb(235, 120, 6);
+            }
+       }
+
+       .selectItem {
+            font-size: 19px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            color: rgb(235, 120, 6);
+            width: 150x;
+            height: 30px;
+       }
+    }
+}
+
+// .editor-container {
+//     height: 100%;
+// }
+
+.inputField {
+    width: 40px;
+    color: #aab1be ;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  
+.inputField:focus {
+    border-color: #eb7806;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+// .manaco-editor {
+//     font-size: 30px;
+// }
+
+.toolbar {
+    :global(.bytemd-toolbar) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1f1f1f;
+        border-bottom: #2b2b2b 1px solid;
+        color: #abb2bf;
+        :global(.bytemd-tippy:hover) {
+            background-color: #2b2b2b;
+            color: #eb7806;
+        }
+    }
+   
+}

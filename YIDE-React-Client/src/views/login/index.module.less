@@ -1,0 +1,183 @@
+.login {
+    height: 100vh;
+    background-color: #1e1e1e;
+
+    display: flex;
+    flex-direction: row;
+
+    // top: 50%;
+}
+
+.loginInfo {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    padding: 100px 50px 100px 150px;
+
+    color: #fff;
+    .title {
+        font-family: 'Times New Roman';
+        font-size: 80px;
+        padding-left: 20px;
+        letter-spacing: 5px;
+        color: #e56e0c;
+        font-weight: bold;
+    }
+
+    .slogan {
+        font-size: 30px;
+        padding-left: 20px;
+        padding-bottom: 25px;
+        font-family: Arial;
+        letter-spacing: 1.5px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+
+    .info {
+        font-size: 20px;
+        padding-left: 20px;
+        padding-bottom: 25px;
+        font-family: Arial;
+        letter-spacing: 1.2px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+
+    .autor {
+        font-size: 20px;
+        padding-left: 20px;
+        padding-bottom: 25px;
+        font-family: Arial;
+        letter-spacing: 1.2px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+
+    .infoImg {
+
+        // height: auto;
+        // height: auto;
+        margin-left: 40px;
+        background-image: url('clip.png');
+        background-size: cover; /* Ensure the image covers the div */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent repeating the image */
+        border-radius: 10px; /* 圆角效果 */
+        box-shadow: 4px 4px 4px 6px rgba(129, 128, 128, 0.2); /* 阴影效果 */
+        padding-top: 47%;
+        position: relative;
+        width:100%; /* or any other fixed width */
+    }
+}
+
+.loginBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    
+
+    .loginForm {
+        // position: absolute;
+        // top: 30%;
+        // right: 40%;
+        margin-right: 200px; 
+        margin-left: 200px;   
+        width: 400px;
+        height: 470px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    
+        transform: translate(0%,-5%);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .loginTitle {
+            width: 300px;
+            font-family: sans-serif;
+            text-align: center;
+            color: #e56e0c;
+            font-size: 28px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 50px 20px 30px 20px;
+            padding: 8px;
+            font-weight: 600;
+        }
+
+        .loginInput {
+            width: 320px;
+            height: 35px;
+            background: transparent;
+            border-bottom: 1px solid #e56e0c;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            font-family: sans-serif;
+            @keyframes blink {
+                0% { border-bottom-color: rgb(239, 165, 4); }
+                50% { border-bottom-color: rgb(209, 190, 48); }
+                100% { border-bottom-color: rgb(246, 94, 0); }
+            }
+            &:focus {
+                outline: none;
+                animation: blink 0.5s linear infinite;;
+                font-size: 16px;
+            }
+        }
+
+        ::placeholder{
+            color: #a8a8a8;
+            font-family: Arial;
+        }
+
+        .loginButton {
+            // padding: 12px 0 12px 0;
+            width: 300px;
+            height: 40px;
+            color: #fff;
+            background-color: #e56e0c;
+            font-size: 24px;
+            border: none;
+            font-weight: 400;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.4s ease;
+            
+            margin-top: 30px;
+            &:hover {
+                background-color: #fff;
+                color: #000;
+                font-weight: 400;
+            }
+        }
+
+        .link {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 300px;
+            font-size: 20px;
+            padding-top: 20px;
+            margin-top: 30px;
+            color: #fff;
+            letter-spacing: 1.2px;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: #e56e0c;
+            }
+        }
+
+    }
+    
+}

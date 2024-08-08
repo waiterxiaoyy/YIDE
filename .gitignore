@@ -1,0 +1,23 @@
+# 忽略所有的 .log 文件
+*.log
+
+# 忽略特定的目录
+YIDE-Egg-Server/config/config.prod.js
+
+YIDE-Egg-Server/config/config.local.js
+
+YIDE-React-Client/node_modules
+
+YIDE-React-Client/dist
+
+deployment.md
+
+docker.md
+
+# 忽略nginx目录
+nginx
+
+.vscode
+
+.prettier.config.cjs
+

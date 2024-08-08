@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+// helper
+.centerXy {
+  // width: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+
+.container {
+  height: 100vh;
+  background-color: #1f1f1f;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+}
+
+.copyContainer {
+  text-align: center;
+}
+
+p {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: .2px;
+  margin: 0;
+}
+
+.handle {
+  background: #eb7806;
+  width: 10px;
+  height: 30px;
+  top: 0;
+  right: 0;
+  margin-top: 1px;
+  position: absolute;
+  animation: blink 1s infinite; /* 添加动画 */
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1; /* 完全可见 */
+    }
+    50% {
+      opacity: 0; /* 完全透明 */
+    }
+    100% {
+      opacity: 1; /* 完全可见 */
+    }
+  }
