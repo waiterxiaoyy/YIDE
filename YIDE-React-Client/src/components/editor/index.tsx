@@ -2,7 +2,7 @@ import styles from './index.module.less';
 import { Editor, Monaco } from '@monaco-editor/react';
 import { VscRunCoverage, VscSave, VscCloudDownload } from 'react-icons/vsc';
 import { RiAddFill, RiSubtractFill } from 'react-icons/ri';
-import { useRef, useState } from 'react';
+import {  useRef, useState } from 'react';
 import { fileStore } from '@/store/fileStore';
 import api from '@/api';
 import { toast } from 'react-toastify';
@@ -10,6 +10,7 @@ import { File } from '@/types';
 import { getType } from '@/utils';
 import { MenuItem, Select } from '@material-ui/core';
 import Toolbar from '../mdEdit/toolbar';
+import storage from '@/utils/storage';
 
 export default function IEditor({ callBackReload }: { callBackReload: () => void }) {
   const [fontSize, setFontSize] = useState<number>(18);
@@ -32,10 +33,10 @@ export default function IEditor({ callBackReload }: { callBackReload: () => void
 
   const editorRef = useRef<Monaco | null>(null);
 
-  const handleEditorDidMount = (editor: any, monaco: Monaco) => {
-    editorRef.current = editor;
 
-    // 添加 Ctrl+S 快捷键
+  const handleEditorDidMount = (editor: any, monaco: Monaco) => {
+    editor.getAction('editor.action.formatDocument').run();
+    editorRef.current = editor;
     editor?.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, () => {
       handleRun();
     });
@@ -92,7 +93,7 @@ export default function IEditor({ callBackReload }: { callBackReload: () => void
     const unsavedFiles = Object.entries(fileStore.getState().fileContent).filter(([_, value]) => !value.saveStatus);
 
     const unsaveFileList: File.FileItem[] = [];
-
+   
     unsavedFiles.forEach(([fileId, value]) => {
       unsaveFileList.push({
         id: Number(fileId),
@@ -101,7 +102,6 @@ export default function IEditor({ callBackReload }: { callBackReload: () => void
         content: value.content
       });
     });
-
     const data = await api.updateFileList(unsaveFileList);
 
     if (data) {
@@ -128,14 +128,17 @@ export default function IEditor({ callBackReload }: { callBackReload: () => void
   const handleSeletedComplileChange = async (event: React.ChangeEvent<{ value: unknown }>) => {
     await setStoreSeletedHtmlFile(event.target.value as string);
     setSeletedHtmlFile(event.target.value as string);
+    storage.set('seletedHtmlFile', event.target.value as string);
     const name = event.target.value as string;
     if (name.toString().endsWith('.md')) {
       filesList.map(file => {
         if (file.name === name) {
           setMdFile(file);
+          storage.set('mdFile', file);
         }
       });
     }
+    callBackReload();
   };
 
   const handleBold = () => {
@@ -269,9 +272,7 @@ export default function IEditor({ callBackReload }: { callBackReload: () => void
 
   const handleImageUpload = async (files: FileList | null) => {
     if (!files) return;
-    console.log('files', files);
     const data = await api.uploadImage([files[0]]);
-    console.log('uploadedImages', data);
     if (data) {
       const editor = editorRef.current;
       if (editor) {
@@ -382,19 +383,23 @@ export default function IEditor({ callBackReload }: { callBackReload: () => void
           <VscCloudDownload className={styles.toolItem} onClick={handleDownload} title='Download' />
         </div>
       </div>
-      <div className={styles.toolbar}>
-        <Toolbar
-          handleBold={handleBold}
-          handleItalic={handleItalic}
-          handleLink={handleLink}
-          handleQuote={handleQuote}
-          handleInlineCode={handleInlineCode}
-          handleCodeBlock={handleCodeBlock}
-          handleUnorderedList={handleUnorderedList}
-          handleOrderedList={handleOrderedList}
-          handleImageUpload={handleButtonClick}
-        />
-      </div>
+     {
+      fileType === 'md' ?  (
+          <div className={styles.toolbar}>
+            <Toolbar
+              handleBold={handleBold}
+              handleItalic={handleItalic}
+              handleLink={handleLink}
+              handleQuote={handleQuote}
+              handleInlineCode={handleInlineCode}
+              handleCodeBlock={handleCodeBlock}
+              handleUnorderedList={handleUnorderedList}
+              handleOrderedList={handleOrderedList}
+              handleImageUpload={handleButtonClick}
+            />
+        </div>
+      ) : ''
+     }
       <Editor
         theme='vs-dark'
         width='100%'

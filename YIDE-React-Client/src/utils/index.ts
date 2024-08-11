@@ -8,6 +8,8 @@ export function getType(value: string) {
         return 'css';
     } else if (value === 'html' || value === 'jsx') {
         return 'html';
+    } else if (value === 'md' || value === 'markdown') {
+        return 'markdown';
     } else if (value === 'py') {
         return 'python';
     } else if (value === 'java') {

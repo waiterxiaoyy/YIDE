@@ -1,6 +1,16 @@
 import { File, FileListProps } from '@/types';
 import styles from './index.module.less';
-import { DiPython, DiJavascript1, DiHtml5, DiCss3Full, DiSass, DiLess, DiCode, DiReact } from 'react-icons/di';
+import {
+  DiPython,
+  DiJavascript1,
+  DiHtml5,
+  DiCss3Full,
+  DiSass,
+  DiLess,
+  DiCode,
+  DiReact,
+  DiMarkdown
+} from 'react-icons/di';
 import { TbBrandTypescript, TbBrandCpp } from 'react-icons/tb';
 import { useEffect, useState } from 'react';
 import { VscCloudDownload, VscTrash } from 'react-icons/vsc';
@@ -51,6 +61,7 @@ export default function FileList(props: FileListProps) {
     cpp: TbBrandCpp,
     typescript: TbBrandTypescript,
     tsx: DiReact,
+    md: DiMarkdown,
     other: DiCode
   };
 

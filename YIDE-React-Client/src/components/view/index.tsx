@@ -37,7 +37,6 @@ export default function IView({ reloadKey }: { reloadKey: number }) {
   };
 
   const getMdContent = async () => {
-    console.log('mdFile', mdFile);
     const data = await api.getFileContent(mdFile.id, mdFile.name, mdFile.type);
     if (data) {
       setMdContent(data);
