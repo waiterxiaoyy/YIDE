@@ -1,4 +1,4 @@
-# YIDE-Egg-Server
+# YIDE-React-Client
 
 `YIDE-Egg-Server` is the back-end project of Egg.js and mysql as the technology stack, and `YIDE-React-client` is the front-end project of React as the technology stack, and the two need to be started at the same time to be used normally
 
