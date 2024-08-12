@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://sm.ms/image/iesNtO9GdnMvRXh" target="_blank"><img src="imgs/logo.png" ></a>
+<a href="https://githun.com/waiterxiaoyy/yide" target="_blank"><img src="imgs/logo.png" ></a>
 
 <h1 align="center">YIDE</h1>
 
@@ -34,7 +34,7 @@ Documentation is ongoing......
 
 - There are two main reasons for developing this project:
     - First, often ask GPT to write some styles, but can not see the effect in time, simply hand off a own online viewer directly, and do some things to improve some functions
-    - The second is to increase their own project experience
+    - The second is to increase my project experience
 
 
 ## Features :boom:
@@ -170,7 +170,7 @@ YIDE
 ├── YIDE-React-Client
 ```
 
-`YIDE-egg-server` is the back-end project of Egg.js and mysql as the technology stack, and `YIDE-React-client` is the front-end project of React as the technology stack, and the two need to be started at the same time to be used normally
+`YIDE-Egg-Server` is the back-end project of Egg.js and mysql as the technology stack, and `YIDE-React-client` is the front-end project of React as the technology stack, and the two need to be started at the same time to be used normally
 
 - **Install yarn globally**
 
@@ -211,7 +211,7 @@ After the installation is complete, configure the user name and password.
 
 2. Configure MySQL in the project
 
-Configure MySQL entries and sequelize entries in config.default.js in `YIDE-Egg-Server/config`, and change the password and database to your own Settings.
+Configure `mysql` entries and `sequelize` entries in config.default.js in `YIDE-Egg-Server/config`, and change the password and database to your own Settings.
 
 ```js
 config.mysql = {
@@ -256,12 +256,12 @@ yarn
 
 Because the project used the graph bed, using the `oss` cloud service, so you need to configure `oss`, otherwise the graph bed will not be available.
 
-In the `config.default.js` configuration `oss`item, `accessKeyId `, `accessKeySecret`, `bucket` is obtained in the `oss` application, the specific oss service opening please consult the information.
+In the `config.default.js` configuration `oss`item, `region`、 `accessKeyId `, `accessKeySecret`, `bucket` is obtained in the `oss` application, the specific `oss` service opening please consult the information.
 
 ```js
 config.oss = {
     client: {
-        region: `oss-cn-beijing`,
+        region: ``,
         accessKeyId: ``,
         accessKeySecret: ``,
         bucket: ``
@@ -279,7 +279,7 @@ yarn dev
 
 - **Project deployment**
 
-The server uses docker to manage the project, the front-end project uses nginx deployment, and the back-end can be packaged as an image to start.
+The server uses `docker` to manage the project, the front-end project uses `nginx` deployment, and the back-end can be packaged as an image to start.
 
 Deployment questions welcome to add wechat communication: `zhouyiyang0328`
 
@@ -299,7 +299,7 @@ If you want to get involved, you are welcome to submit a PR as a contributor to 
 - [ ] Create directory, directory management, directory tree
 - [ ] Code sharing
 
-## 贡献者 🤝
+## Contribution 🤝
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 

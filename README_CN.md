@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://sm.ms/image/iesNtO9GdnMvRXh" target="_blank"><img src="imgs/logo.png" ></a>
+<a href="https://githun.com/waiterxiaoyy/yide" target="_blank"><img src="imgs/logo.png" ></a>
 
 <h1 align="center">YIDE</h1>
 
@@ -9,8 +9,6 @@
 
 
 线上版本：[YIDE在线地址](http://xiaorongshu.cc)
-
-star是对我最大的鼓励
 
 文档持续完善中......
 
@@ -180,7 +178,7 @@ YIDE
 ├── YIDE-React-Client
 ```
 
-`YIDE-Egg-Server`是以Egg.js和mysql为技术栈的后端项目，`YIDE-React-Client`是以React为技术栈的前端项目，两个需同时启动才能正常使用
+`YIDE-Egg-Server`是以`Egg.js`和`mysql`为技术栈的后端项目，`YIDE-React-Client`是以`React`为技术栈的前端项目，两个需同时启动才能正常使用
 
 - 全局安装`yarn`
 
@@ -215,15 +213,15 @@ yarn dev
 
 - **后端项目`YIDE-Egg-Server`配置/启动**
 
-1. 安装和配置MySQL
+1. 安装和配置`MySQL`
 
 后端需要提前安装好`MySQL`，自行查阅资料安装，版本`8.0`以上。
 
 安装好后需要配置用户名和密码。
 
-2. 项目中配置MySQL
+2. 项目中配置`MySQL`
 
-在`YIDE-Egg-Server/config`的`config.default.js`中配置MySQL项和sequelize项，密码和数据库改成你自己设置的。
+在`YIDE-Egg-Server/config`的`config.default.js`中配置`mysql`项和`sequelize`项，密码和数据库改成你自己设置的。
 
 ```js
 config.mysql = {
@@ -254,7 +252,7 @@ config.sequelize = {
 
 3. 执行sql语句导入表和基础数据
 
-在项目目录下有`app.sql`文件，全部复制到`MySQL`控制台执行。
+在项目目录下有`app.sql`文件，将里面的代码全部复制到`MySQL`控制台执行。
 
 4. 安装依赖
 
@@ -268,12 +266,12 @@ yarn
 
 由于项目中用到了图床，使用的是`oss`云服务，所以需要配置`oss`，否则图床会无法使用。
 
-在`config.default.js`中配置`oss`项，`accessKeyId`、`accessKeySecret`、`bucket`是在`oss`申请时得到的，具体的oss服务开通请自行查阅资料。
+在`config.default.js`中配置`oss`项，`region`、`accessKeyId`、`accessKeySecret`、`bucket`是在`oss`申请时得到的，具体的`oss`服务开通请自行查阅资料。
 
 ```js
 config.oss = {
     client: {
-        region: 'oss-cn-beijing',
+        region: '',
         accessKeyId: '',
         accessKeySecret: '',
         bucket: ''
@@ -291,9 +289,9 @@ yarn dev
 
 - 项目部署
 
-服务器使用docker进行管理项目，前端项目使用nginx部署，后端打包成镜像启动即可。
+服务器使用`docker`进行管理项目，前端项目使用`nginx`部署，后端打包成镜像启动即可。
 
-部署疑问欢迎添加微信交流：zhouyiyang0328
+部署疑问欢迎添加微信交流：`zhouyiyang0328`
 
 ## 更新日志 📅
 
