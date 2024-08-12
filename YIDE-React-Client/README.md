@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# YIDE-Egg-Server
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`YIDE-Egg-Server` is the back-end project of Egg.js and mysql as the technology stack, and `YIDE-React-client` is the front-end project of React as the technology stack, and the two need to be started at the same time to be used normally
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Install yarn globally**
 
-## Expanding the ESLint configuration
+Project start and deployment need `node` environment, please install the environment in advance, the `node` version used in the project is `v18.18.1 `, the following operations are based on this version, if there is inconsistency, please install `nvm` switch to the corresponding node version, install `nvm` please consult the relevant information.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```shell
+npm install -g yarn
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Configuration/Startup**
+
+1. Installation dependency
+
+```shell
+yarn
+```
+
+2. Configuration port
+
+Configure the project port and proxy forwarding in `vite.config.js` and` vite.config.ts`. The default front-end port is `3001`and the back-end port is `8000`
+
+3. Start-up project
+
+```shell
+// Start-up project in development
+yarn dev
+```
