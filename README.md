@@ -3,63 +3,71 @@
 
 <h1 align="center">YIDE</h1>
 
-:point_right: 一款轻量型的在线前端编译器:cupid: :point_left:
+English / [简体中文 🌏](https://github.com/waiterxiaoyy/yide/tree/master/README_CN.md)
 
-<h4>V 1.0</h4>
+:point_right: A lightweight online front-end compiler:cupid: :point_left:
 
-直达：[在线地址](http://xiaorongshu.cc)
 
-文档持续完善中......
+Online version: [YIDE online address](http://xiaorongshu.cc)
 
-<!-- [![Version](https://img.shields.io/visual-studio-marketplace/v/codellms.CodeLLMs-AI)](https://marketplace.visualstudio.com/items?itemName=codellms.codellms-ai)
-[![Downloads](https://img.shields.io/visual-studio-marketplace/d/codellms.CodeLLMs-AI)](https://marketplace.visualstudio.com/items?itemName=codellms.codellms-ai)
-[![License](https://img.shields.io/aur/license/android-studio)](https://github.com/waiterxiaoyy/CodeLLMs-AI/blob/main/LICENSE) -->
+Documentation is ongoing......
+
+![GitHub Repo stars](https://img.shields.io/github/stars/waiterxiaoyy/YIDE)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/waiterxiaoyy/YIDE)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/waiterxiaoyy/YIDE)
+![GitHub License](https://img.shields.io/github/license/waiterxiaoyy/YIDE)
+![GitHub language count](https://img.shields.io/github/languages/count/waiterxiaoyy/YIDE)
 
 </div>
 
-## 介绍 :star2:
+## Introduction :star2:
 
-![项目登录页](imgs/login.png)
-![项目主图](imgs/image.png)
+![Project entry page](imgs/login.png)
+![Project master diagram](imgs/image.png)
 
-- YIDE是一款支持在线编写前端代码的编辑器，自己搭建后端编译，支持html、js、css和markdown编译，非常适合尝试一些想法，执行一些基础操作。
+- YIDE is an editor that supports writing front-end code online, with `React` and `Typescript` as the front end, `Egg.js` and` Mysql `as the back end, supporting` html `, `js`,` css `and` markdown `compilation, which is very suitable for verifying ideas. Practice and organize documentation.
 
-- 开发的初衷主要是两点：
-    - 一是经常问GPT写一些样式，但是不能及时查看到效果，干脆直接手撸一个自己的在线查看器，后面做着做着完善了一些功能
-    - 二是增加一下自己的项目经历
+- This project has the following features compared to some current online compilers:
+    - Support user differentiation, users can have independent file management space
+    - Support for custom scripts and style files
+    - Support Markdown file writing and compilation
+
+- There are two main reasons for developing this project:
+    - First, often ask GPT to write some styles, but can not see the effect in time, simply hand off a own online viewer directly, and do some things to improve some functions
+    - The second is to increase their own project experience
 
 
-## 特点 :boom:
+## Features :boom:
 
-- :sunny: **文件管理**：z支持区分用户和文件存储，目前仅支持新文件创建，相比于其他在线平台，支持选择编译的主文件如html和md文件。
+- :file_folder: **File Management** : Support to distinguish between users and file storage, currently only support new file creation, compared to other online platforms, support to select compiled master files such as `html` and `md` files.
 
-- :cat: **高亮代码**：集成进来的Monaco-Editor，支持文件语言识别，代码补全以及高亮，支持一系列快捷键，如一键保存编译和格式化代码。
+- :cat: **Efficiency Editing** : The integrated `Monaco-Editor` supports language recognition, code completion and highlighting, and supports a series of shortcut keys, such as saving compiled and formatted code.
 
-- :penguin: **窗口拖动**：主要页面布局是文件区Explorer，编辑器Editor和展示区Viewer，支持各栏“自由”拖动。
+- :penguin: **Window Drag** : The main page layout is the file area Explorer, Editor and display area Viewer, supporting the "free" drag of each column.
 
-- :panda_face: **多类型文件编译**：支持Html结合样式文件和脚本文件，支持Markdown格式文件编译。
+- :panda_face: **Multi-type File Compilation** : Support `html` combined with style files and script files, support `Markdown` format file compilation.
 
-- :monkey: **自由化**：编写Html文件支持自动引入默认的脚本文件和样式文件，也可自定义脚本文件和样式文件，具体查看使用文档。
+- :monkey: **Liberalization** : Write `html` files to support the automatic introduction of default script files and style files, you can also customize script files and style files, specifically view the use of documents.
 
-- :dog: **内置图床**：Markdwon支持图像上传，内置OSS图床。
+- :dog: **Built-in Map Bed** : `Markdwon` supports image uploading, built-in `OSS` map bed.
 
-## 使用文档:iphone:
+## Document :iphone:
 
-- **创建新文件**
+- **Create new file**
 
-在主页的左侧文件索引区Explorer创建新建文件，支持html，css，js，md为后缀的文件，其中html和md是可编译执行的文件。
+In the left file index area of the main page Explorer creates a new file, supporting files with the suffix `html`, `css`, `js`,` md `, where html and md are compilable files.
 
-**默认文件：index.html，script.js，style.css 是默认文件，默认文件不允许删除。**
+**Default files: `index.html`, `script.js`,` style.css `are default files, default files are not allowed to be deleted.**
 
-**自行创建的文件名不建议包含style和script字眼。**
+**Self-created file names are not recommended to contain the words `index `, `style` and `script`.**
 
-- **编辑文件**
+- **Edit file**
 
-在主页的中间区域是文件编辑区Editor，中间展示的当前文件名，可调节编辑区内的字体大小，选择编译文件（html/md），点击`编译按钮`则会自动保存所有未保存的文件然后编译，点击`保存按钮`会保存当前文件。
+In the middle area of the main page is the file editing area Editor, the current file name displayed in the middle, can adjust the font size in the editing area, select compile file (`html/md`), click `compile button` will automatically save all unsaved files and then compile, click `save button` will save the current file.
 
-1.  Html编辑
+1. `html` edit
 
-html文件不需要标准模板，只需要书写主要结构即可
+The `html` file does not need a standard template, only the main structure needs to be written
 
 ```html
 <div>
@@ -68,9 +76,7 @@ html文件不需要标准模板，只需要书写主要结构即可
 </div>
 ```
 
-2. Css编辑
-
-css编辑如下
+2. `css` edit
 
 ```css
 body {
@@ -81,45 +87,45 @@ body {
 }
 ```
 
-3. Js编辑
-
-Js编辑如下
+3. `js` edit
 
 ```js
-document.addEventListener('DOMContentLoaded', function () { 
-    console.log('JavaScript loaded for YIDE'); 
+document.addEventListener(`DOMContentLoaded`, function () { 
+    console.log(`JavaScript loaded for YIDE`); 
 });
 ```
 
-4. Md编辑
+4. `Md` edit
 
-Md文件编辑支持常规的基础操作，暂不支持复杂的样式如类图、流程图。
+`Md` file editing supports general basic operations, and does not support complex styles such as class diagrams and flow charts.
 
-- **文件编译**
+- **File compilation**
 
-文件编译目前仅支持html和md文件编译，后续集成查看TODO List。
+File compilation Currently supports only html and md file compilation, and the TODO List is integrated in the future.
 
-1. Html编译
+1. html compilation
 
-html会由后台自动解析出合格的代码，同时会解析style.css和script.js中的代码，由后台组合成一套完整的页面代码返回前台展示。
+html will automatically parse out the qualified code by the background, and will parse the code in`style.css` and`script.js`, and the background will combine into a complete set of page code to return to the foreground display.
 
-如果需要自定义样式文件和脚本文件，需要在html文件中加入下面两行：
+If you need a custom style file and a script file, you need to add the following two lines in the`html` file:
 
 ```html
+<!-- Unintroduce default styles and scripts -->
 // no style.css
 // no script.js
 ```
 
-这两行代码需要严格按照上述格式写在需要自定义的html文件中，后台会识别并且取消加入默认的样式和脚本文件，用户自定义文件引入如下：
+These two lines of code need to be written in strict accordance with the above format in the need to customize the`html` file, the background will recognize and cancel the default style and script files, user-defined files introduced as follows:
 
 ```html
+<!-- Unintroduce default styles and scripts -->
 // no style.css
 // no script.js
 
-<!-- 引入样式文件 -->
+<!-- Introduce style file -->
 <link rel="stylesheet" href="/my.css" />
 
-<!-- 引入脚本文件 -->
+<!-- Import script file -->
 <script type="text/script" src="/my.js" ></script>
 
 <div>
@@ -128,28 +134,186 @@ html会由后台自动解析出合格的代码，同时会解析style.css和scri
 </div>
 ```
 
-当然，如果不需要引入文件，也可以直接在html文件的`<style></style>`和`<script></script>`中书写样式和脚本操作。
+> Note: Importing custom files must start with slash `/`, otherwise the files under the user will not be recognized.
 
-2. Md编译
+Of course, if you do not need to introduce files, you can also write styles and script operations directly in `<style></style>` and `<script></script>` of the html file.
 
-Md编译结合的是掘金论坛主题，暂时不支持更换主题。
+2. `Md` compilation
 
-- **下载文件**
+`Md` compilation is combined with the theme of the Nuggets forum, and the replacement theme is not supported for the time being.
 
-在文件索引区和编辑区都支持下载文件，点击`下载按钮`即可。
+- **Download file**
 
+You can download files in both the file index area and the edit area by clicking the `Download button`.
 
-## TODO List 📅
+- **Upload files**
 
-- [ ] 页面布局优化：索引区缩进、响应式适配
-- [ ] 文件上传功能
-- [ ] 支持更多文件类型编译：vue、react等
-- [ ] 集成控制台
+Upload is not supported
+
+- **Rename file**
+
+Not supported for now, update later
+
+## Installation/configuration :wrench:
+
+- **Cloning**
+
+```sh
+git clone git@github.com:waiterxiaoyy/YIDE.git
+```
+
+- **Structure**
+
+```md
+YIDE
+├── YIDE-Egg-Server
+├── YIDE-React-Client
+```
+
+`YIDE-egg-server` is the back-end project of Egg.js and mysql as the technology stack, and `YIDE-React-client` is the front-end project of React as the technology stack, and the two need to be started at the same time to be used normally
+
+- **Install yarn globally**
+
+Project start and deployment need `node` environment, please install the environment in advance, the `node` version used in the project is `v18.18.1 `, the following operations are based on this version, if there is inconsistency, please install `nvm` switch to the corresponding node version, install `nvm` please consult the relevant information.
+
+```shell
+npm install -g yarn
+```
+
+- **Front-end project `YIDE-React-Client` configuration/startup**
+
+1. Installation dependency
+
+```shell
+cd YIDE-React-Client
+
+yarn
+```
+
+2. Configuration port
+
+Configure the project port and proxy forwarding in `vite.config.js` and` vite.config.ts`. The default front-end port is `3001`and the back-end port is `8000`
+
+3. Start-up project
+
+```shell
+// Start-up project in development
+yarn dev
+```
+
+- **Backend project `YIDE-Egg-Server` configuration/startup**
+
+1. Install and configure MySQL
+
+The back-end needs to install `MySQL` in advance, consult the data to install, version `8.0` or more.
+
+After the installation is complete, configure the user name and password.
+
+2. Configure MySQL in the project
+
+Configure MySQL entries and sequelize entries in config.default.js in `YIDE-Egg-Server/config`, and change the password and database to your own Settings.
+
+```js
+config.mysql = {
+    app: true,
+    agent: false,
+    client: {
+        host: `localhost`,
+        port: `3306`,
+        user: `root`,
+        password: ``,
+        database: `yide`
+    }
+};
+
+config.sequelize = {
+    dialect: `mysql`,
+    host: `localhost`,
+    port: `3306`,
+    user: `root`,
+    password: ``,
+    database: `yide`,
+    define: {
+        timestamps: false,
+        freezeTableName: true
+    }
+};
+```
+
+3. Run sql statements to import tables and basic data
+
+In the project directory there is the `app.sql` file, all copy to the `MySQL` console execution.
+
+4. Installation dependency
+
+Under directory `YIDE-Egg-Server`
+
+```shell
+yarn
+```
+
+5. Configuring the `oss` service (optional)
+
+Because the project used the graph bed, using the `oss` cloud service, so you need to configure `oss`, otherwise the graph bed will not be available.
+
+In the `config.default.js` configuration `oss`item, `accessKeyId `, `accessKeySecret`, `bucket` is obtained in the `oss` application, the specific oss service opening please consult the information.
+
+```js
+config.oss = {
+    client: {
+        region: `oss-cn-beijing`,
+        accessKeyId: ``,
+        accessKeySecret: ``,
+        bucket: ``
+    }
+};
+```
+
+5. Start-up
+
+After starting the project, the project will be exposed to port `8000`
+
+```shell
+yarn dev
+```
+
+- **Project deployment**
+
+The server uses docker to manage the project, the front-end project uses nginx deployment, and the back-end can be packaged as an image to start.
+
+Deployment questions welcome to add wechat communication: `zhouyiyang0328`
+
+## ChangeLog 📅
+
+See the [ChangeLog](https://github.com/waiterxiaoyy/yide/blob/master/CHANGELOG.md) for the latest updates.
+
+## TODO List 📋
+
+If you want to get involved, you are welcome to submit a PR as a contributor to the project and work together to build a more lightweight and user-friendly online IDE.
+
+- [ ] Page layout optimization: index area indent, responsive adaptation
+- [ ] File upload function
+- [ ] Supports more file types, such as vue and react
+- [ ] Integrated console
+- [ ] Rename the file
+- [ ] Create directory, directory management, directory tree
+- [ ] Code sharing
 
 ## 贡献者 🤝
 
-这个项目的存在感谢所有贡献者：:
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+This project exists thanks to all the people who contribute:
 
 <a href="https://github.com/waiterxiaoyy/YIDE/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=waiterxiaoyy/YIDE" />
 </a>
+
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/waiterxiaoyy/YIDE/blob/master/LICENSE) file for details.
+
+## Support 💖
+
+If you find this project helpful, please consider giving it a ⭐️ on [GitHub](https://github.com/waiterxiaoyy/YIDE)!
+
